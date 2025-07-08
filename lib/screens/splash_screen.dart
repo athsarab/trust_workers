@@ -48,6 +48,7 @@ class _SplashScreenState extends State<SplashScreen>
     _animationController.forward();
   }
 
+// Navigate to the appropriate screen after a delay
   void _navigateAfterDelay() {
     Future.delayed(const Duration(seconds: 3), () {
       if (mounted) {
