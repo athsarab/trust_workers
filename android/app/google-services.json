@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "314805606607",
+    "project_id": "trust-workers",
+    "storage_bucket": "trust-workers.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:314805606607:android:4cf0c98d648312051fbfba",
+        "android_client_info": {
+          "package_name": "com.example.trust_workers"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwZGAszPgQ6ZTVCPH9ycQ0vFsCf6Kjjck"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
