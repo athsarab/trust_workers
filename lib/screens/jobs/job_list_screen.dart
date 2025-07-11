@@ -88,7 +88,7 @@ class _JobListScreenState extends State<JobListScreen> {
                           onSelected: (selected) {
                             if (category == 'All') {
                               jobProvider.getAllJobPosts();
-                              jobProvider.setCategory('');
+                              jobProvider.selectCategory('');
                             } else {
                               jobProvider.getJobPostsByCategory(category);
                             }

@@ -54,9 +54,10 @@ class AuthProvider extends ChangeNotifier {
         password: password,
         userModel: userModel,
       );
-      
+
       if (result['success'] == true) {
-        _currentUser = UserModel.fromMap(result['user'], result['user']['id'].toString());
+        _currentUser =
+            UserModel.fromMap(result['user'], result['user']['id'].toString());
         _setLoading(false);
         return true;
       } else {
@@ -83,9 +84,10 @@ class AuthProvider extends ChangeNotifier {
         email: email,
         password: password,
       );
-      
+
       if (result['success'] == true) {
-        _currentUser = UserModel.fromMap(result['user'], result['user']['id'].toString());
+        _currentUser =
+            UserModel.fromMap(result['user'], result['user']['id'].toString());
         _setLoading(false);
         return true;
       } else {

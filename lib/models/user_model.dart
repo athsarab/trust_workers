@@ -23,20 +23,28 @@ class UserModel {
 
   // Convert from Firestore document
   factory UserModel.fromMap(Map<String, dynamic> map, String id) {
-    return UserModel(
-      id: id,
-      name: map['name'] ?? '',
-      phone: map['phone'] ?? '',
-      email: map['email'] ?? '',
-      userType: UserType.values.firstWhere(
-        (type) => type.toString() == map['userType'],
-        orElse: () => UserType.normal,
-      ),
-      jobCategory: map['jobCategory'],
-      experience: map['experience'],
-      province: map['province'],
-      createdAt: DateTime.parse(map['createdAt']),
-    );
+    try {
+      return UserModel(
+        id: id,
+        name: map['name']?.toString() ?? '',
+        phone: map['phone']?.toString() ?? '',
+        email: map['email']?.toString() ?? '',
+        userType: UserType.values.firstWhere(
+          (type) => type.toString() == map['userType']?.toString(),
+          orElse: () => UserType.normal,
+        ),
+        jobCategory: map['jobCategory']?.toString(),
+        experience: map['experience']?.toString(),
+        province: map['province']?.toString(),
+        createdAt: map['createdAt'] != null
+            ? DateTime.parse(map['createdAt'].toString())
+            : DateTime.now(),
+      );
+    } catch (e) {
+      print('Error parsing UserModel from map: $e');
+      print('Map data: $map');
+      rethrow;
+    }
   }
 
   // Convert to Firestore document

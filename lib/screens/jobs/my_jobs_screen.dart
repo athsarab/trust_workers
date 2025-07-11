@@ -25,19 +25,26 @@ class _MyJobsScreenState extends State<MyJobsScreen> {
     _loadMyJobs();
   }
 
-  void _loadMyJobs() {
+  void _loadMyJobs() async {
     final authProvider = Provider.of<AuthProvider>(context, listen: false);
     final currentUser = authProvider.currentUser;
 
     if (currentUser != null) {
-      _databaseService.getJobPostsByUser(currentUser.id).listen((jobs) {
+      try {
+        final jobs = await _databaseService.getJobPostsByUser(currentUser.id);
         if (mounted) {
           setState(() {
             _myJobs = jobs;
             _isLoading = false;
           });
         }
-      });
+      } catch (e) {
+        if (mounted) {
+          setState(() {
+            _isLoading = false;
+          });
+        }
+      }
     }
   }
 

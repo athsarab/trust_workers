@@ -71,7 +71,7 @@ class _WorkersListScreenState extends State<WorkersListScreen> {
                         onSelected: (selected) {
                           if (category == 'All') {
                             jobProvider.getAllWorkers();
-                            jobProvider.setCategory('');
+                            jobProvider.selectCategory('');
                           } else {
                             jobProvider.getWorkersByCategory(category);
                           }

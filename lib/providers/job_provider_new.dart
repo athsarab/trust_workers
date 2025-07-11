@@ -108,7 +108,8 @@ class JobProvider extends ChangeNotifier {
   }
 
   // Update job post
-  Future<bool> updateJobPost(String jobPostId, Map<String, dynamic> data) async {
+  Future<bool> updateJobPost(
+      String jobPostId, Map<String, dynamic> data) async {
     _setLoading(true);
     _clearError();
 
