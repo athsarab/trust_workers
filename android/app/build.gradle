@@ -4,7 +4,6 @@ plugins {
     id "kotlin-android"
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id "dev.flutter.flutter-gradle-plugin"
-    // Remove this line: id "com.google.gms.google-services"
 }
 
 android {
@@ -43,11 +42,6 @@ android {
 
 flutter {
     source = "../.."
-}
-
-dependencies {
-    implementation 'com.google.firebase:firebase-analytics'
-    implementation platform('com.google.firebase:firebase-bom:32.2.2')
 }
 
 // Apply the Google Services plugin at the very end
