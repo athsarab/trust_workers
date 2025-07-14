@@ -38,7 +38,7 @@ class CategorySidebar extends StatelessWidget {
                     ),
                     const SizedBox(height: AppSizes.paddingMedium),
                     Text(
-                      'Job Categories',
+                      'Job Categories ',
                       style:
                           Theme.of(context).textTheme.headlineSmall?.copyWith(
                                 color: AppColors.onPrimary,
