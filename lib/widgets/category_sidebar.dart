@@ -46,7 +46,7 @@ class CategorySidebar extends StatelessWidget {
                               ),
                     ),
                     Text(
-                      'Find workers by category',
+                      'Find workers by category ',
                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                             color: AppColors.onPrimary.withOpacity(0.8),
                           ),
