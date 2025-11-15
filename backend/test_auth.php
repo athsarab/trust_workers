@@ -15,7 +15,7 @@ $debug_info = [
 
 // Get all headers for debugging
 if (function_exists('getallheaders')) {
-    $debug_info['headers'] = getallheaders();
+    $debug_info['headers'] = getallheaders(); 
 } else {
     foreach ($_SERVER as $name => $value) {
         if (substr($name, 0, 5) == 'HTTP_') {
