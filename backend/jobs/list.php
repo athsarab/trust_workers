@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
 
 // Validate authentication
 $user_data = requireAuth();
-
+ 
 try {
     // Database connection
     $database = new Database();
